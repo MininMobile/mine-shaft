@@ -20,7 +20,7 @@ public class TerrainGenerator : MonoBehaviour
             for (var z = 0; z < 100; z++)
             {
                 var obj = Instantiate(TerrainTop);
-                obj.position.Set(x, 0, z);
+                obj.transform.Translate(x, 0, z);
             }
         }
 	}
