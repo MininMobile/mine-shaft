@@ -13,14 +13,15 @@ public class TerrainGenerator : MonoBehaviour
 
     void Init()
     {
-        var x = 0;
         var y = 0;
 
-		for (var i = 0; i < 100; i++)
+		for (var x = 0; x < 100; x++)
         {
-
+            for (var z = 0; z < 100; z++)
+            {
+                var obj = Instantiate(TerrainTop);
+                obj.position.Set(x, 0, z);
+            }
         }
-
-        Instantiate(TerrainTop);
 	}
 }
