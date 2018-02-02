@@ -5,9 +5,9 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
 
-    public GameObject TerrainTop;
-    public GameObject TerrainMid;
-    public GameObject TerrainBot;
+    public Transform TerrainTop;
+    public Transform TerrainMid;
+    public Transform TerrainBot;
 
     void Start() { Init(); }
 
@@ -20,5 +20,7 @@ public class TerrainGenerator : MonoBehaviour
         {
 
         }
+
+        Instantiate(TerrainTop);
 	}
 }
