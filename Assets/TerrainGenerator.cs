@@ -1,16 +1,24 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainGenerator : MonoBehaviour {
+public class TerrainGenerator : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+    public GameObject TerrainTop;
+    public GameObject TerrainMid;
+    public GameObject TerrainBot;
+
+    void Start() { Init(); }
+
+    void Init()
+    {
+        var x = 0;
+        var y = 0;
+
+		for (var i = 0; i < 100; i++)
+        {
+
+        }
 	}
 }
