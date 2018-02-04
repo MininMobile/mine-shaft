@@ -26,6 +26,7 @@ public class TerrainGen : MonoBehaviour
     Transform GenerateChunk()
     {
         Transform chunk = new GameObject().transform;
+        chunk.name = "Chunk";
 
         for (var x = 0; x < 16; x++)
         {
