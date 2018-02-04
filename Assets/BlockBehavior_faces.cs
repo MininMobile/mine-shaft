@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BlockBehavior_faces : MonoBehaviour
 {
-    MeshRenderer renderer;
+    MeshRenderer meshRenderer;
 
     void Start()
     {
-        renderer = this.transform.GetComponent<MeshRenderer>();
+        meshRenderer = this.transform.GetComponent<MeshRenderer>();
     }
 
-    void OnCollisionEnter(Collision collision) { renderer.enabled = false; }
-    void OnCollisionExit(Collision collision) { renderer.enabled = true; }
+    void OnCollisionEnter(Collision collision) { meshRenderer.enabled = false; }
+    void OnCollisionExit(Collision collision) { meshRenderer.enabled = true; }
 }
