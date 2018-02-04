@@ -1,8 +1,8 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terrain : MonoBehaviour
+public class TerrainGen : MonoBehaviour
 {
 
     public Transform TerrainTop;
@@ -18,14 +18,14 @@ public class Terrain : MonoBehaviour
             for (var z = 0; z < 4; z++)
             {
                 var chk = Instantiate(GenerateChunk());
-                chk.Translate(x * 360, 0, z * 360);
+                chk.Translate(x * 300, 0, z * 300);
             }
         }
     }
 
     Transform GenerateChunk()
     {
-        Transform chunk = new GameObject().transform;
+        Transform chunk = new GameObject();
 
         for (var x = 0; x < 16; x++)
         {
