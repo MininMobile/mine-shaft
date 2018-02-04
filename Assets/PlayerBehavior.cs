@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour {
-    
-    public float Speed = 1f;
 
-    private float _jumpingVel = 0f;
-    private bool _jumpingUp = false;
+    public Rigidbody Body;
+    public float Speed = 1f;
+    public int JumpHeight = 5;
 
 	void Update()
     {
@@ -18,20 +17,6 @@ public class PlayerBehavior : MonoBehaviour {
         if (Input.GetAxis("Vertical") != 0)
             this.transform.Translate(0, 0, Input.GetAxis("Vertical") * Speed);
 
-        if (Input.GetKeyUp(KeyCode.Space)) { _jumpingUp = true; }
-
-        // Jumping
-        if (_jumpingUp && _jumpingVel > 0)
-        {
-            if (_jumpingVel < 5)
-                _jumpingVel++;
-            
-            if (_jumpingVel > 5)
-                _jumpingVel--;
-
-            _jumpingUp = false;
-        }
-
-        this.transform.Translate(0, _jumpingVel, 0);
+        if (Input.GetKeyDown(KeyCode.Space)) { Body.AddForce(new Vector3(0, JumpHeight, 0), ForceMode.Impulse); }
     }
 }
