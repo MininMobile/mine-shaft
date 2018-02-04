@@ -2,15 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockBehavior : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
+public class BlockBehavior : MonoBehaviour
+{
+    
+	void Start ()
+    {
+        BlockUpdate();
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    static void BlockUpdate()
+    {
+
+    }
 }
