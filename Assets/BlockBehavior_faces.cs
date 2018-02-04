@@ -11,6 +11,13 @@ public class BlockBehavior_faces : MonoBehaviour
         meshRenderer = this.transform.GetComponent<MeshRenderer>();
     }
 
-    void OnCollisionEnter(Collision collision) { meshRenderer.enabled = false; }
-    void OnCollisionExit(Collision collision) { meshRenderer.enabled = true; }
+    void OnCollisionEnter(Collision collision)
+    {
+        meshRenderer.enabled = false;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        meshRenderer.enabled = true;
+    }
 }
