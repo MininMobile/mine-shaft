@@ -17,7 +17,7 @@ public class TerrainGen : MonoBehaviour
         {
             for (var z = 0; z < 4; z++)
             {
-                var chk = Instantiate(GenerateChunk());
+                var chk = GenerateChunk();
                 chk.Translate(x * 300, 0, z * 300);
             }
         }
@@ -25,7 +25,7 @@ public class TerrainGen : MonoBehaviour
 
     Transform GenerateChunk()
     {
-        Transform chunk = new GameObject();
+        Transform chunk = new GameObject().transform;
 
         for (var x = 0; x < 16; x++)
         {
